@@ -1,4 +1,4 @@
-import { welcomeReducer } from '../reducers/welcomeReducer';
+import { welcomeReducer } from '../reducers/reducers';
 import { WelcomeContext } from '../contexts/welcomeContext';
 import { useReducer } from 'react';
 
@@ -11,7 +11,7 @@ export const WelcomeProvider = ({ children }) => {
     const [state, dispatch] = useReducer(welcomeReducer, initialWelcomeState);
 
     const updateMessage = (newMessage, randomNum) => {
-        dispatch({ type: 'UPDATE_MESSAGE', payload: { message: newMessage, randomNum } });
+        dispatch({ type: 'updateMessage', payload: { message: newMessage, randomNum } });
     };
 
     return (
