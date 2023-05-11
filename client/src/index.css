@@ -121,13 +121,51 @@ button {
 
 #orSpan, #chooseDay{
     margin: 2px;
+    font-size: 30px;
 }
 
 .dateSelector select option {
     background-color: #fff;
 }
 
-@media screen and (max-width: 1085px) {
+/* .gif-container {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 120px;
+    margin-right: 120px;
+  } */
+  
+.napoleon-gif{
+    position: absolute;
+    margin-left: -920px;
+    margin-bottom: -340px;
+    width: 370px;
+    border-radius: 200px;
+}
+
+#herodotus{
+    position: absolute;
+    margin-left: 920px;
+    margin-bottom: -340px;
+    width: 500px;
+    border-radius: 200px;
+
+}
+
+.rightEye{
+    position: absolute;
+    width: 12px;
+    margin-left: 470px;
+    margin-top: -70px;
+}
+
+.leftEye{
+    position: absolute;
+    width: 12px;
+    margin-left: 435px;
+}
+
+@media screen and (max-width: 1185px) {
     .welcome-page {
     padding: 2rem;
     }
@@ -176,6 +214,7 @@ button {
     
     #orSpan, #chooseDay {
         margin: 1px;
+        font-size: 25px;
     }
 } 
 
@@ -232,6 +271,7 @@ button {
     
     #orSpan, #chooseDay {
         margin: 1px;
+        font-size: 16px;
     }
 
 }
@@ -287,5 +327,9 @@ button {
     
     #orSpan, #chooseDay {
         margin: 1px;
+    }
+
+    #chooseDay {
+       font-size: 20px;
     }
 }

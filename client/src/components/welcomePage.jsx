@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import EyesComponent from './eyeComponent';
 
 const WelcomePage = () => {
   const [hoverIndex, setHoverIndex] = useState(-1);
@@ -31,7 +32,7 @@ const WelcomePage = () => {
   ];
 
   return (
-    <div className="welcome-page">
+    <div className="welcome-page" >
       <div id="welcomeTitle">
         {title.split('').map((letter, index) => (
           letter === ' ' ? (
@@ -55,8 +56,8 @@ const WelcomePage = () => {
         ))}
       </div>
       <button onClick={goToMainPage}>On this day</button>
-      <span id="orSpan" style={{fontSize: "30px", fontFamily: "serif"}}> or </span>
-      <span id="chooseDay" style={{ fontSize: '30px', fontFamily: 'serif', fontWeight: 'bold' }}> Choose a day </span>
+      <span id="orSpan" style={{fontFamily: "serif"}}> or </span>
+      <span id="chooseDay" style={{fontFamily: 'serif', fontWeight: 'bold' }}> Choose a day </span>
       <div className={"dateSelector"}>
         <select
           value={selectedMonth}
@@ -78,7 +79,12 @@ const WelcomePage = () => {
             <option key={day} value={day}>{day}</option>
           ))}
         </select>
-        <button id= "goButton" onClick={goToSelectedDay}>Go</button>
+        <button id="goButton" onClick={goToSelectedDay}>Go</button>
+      </div>
+      <img src={`${process.env.PUBLIC_URL}/napoleon.gif`} alt="Napoleon" className="napoleon-gif" />
+      <img id="herodotus" src={`${process.env.PUBLIC_URL}/herodotus-no-eyes.png` } alt="herodotus" />
+      <div className="eyes">
+        <EyesComponent />
       </div>
     </div>
   );
