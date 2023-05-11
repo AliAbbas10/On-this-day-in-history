@@ -22,6 +22,10 @@ const OtdPage = () => {
     return <div>Error fetching data: {error.message}</div>;
   }
 
+  if (!data) {
+    return <div>Loading data...</div>;
+  }
+
   return (
     <div>
       <h2>{data.title}</h2>
