@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { WelcomeProvider } from './providers/welcomeProvider';
-import WelcomePage from './components/WelcomePage';
-import OtdPage from './components/otdPage';
+import WelcomePage from './pages/WelcomePage';
+import OtdPage from './pages/otdPage';
 import HistoryProvider from './providers/historyProvider'; // Make sure to import HistoryProvider
 
 function App() {

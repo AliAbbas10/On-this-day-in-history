@@ -1,17 +1,22 @@
-import React, { useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
+
 
 const EyesComponent = () => {
+  const eyeRef = useRef(null);
+
   useEffect(() => {
     const handleMouseMove = (event) => {
-      const eyes = document.getElementsByClassName('eye');
-      const x = (event.clientX * 100) / window.innerWidth + '%';
-      const y = (event.clientY * 100) / window.innerHeight + '%';
+      if (!eyeRef.current) return;
 
-      for (let i = 0; i < eyes.length; i++) {
-        eyes[i].style.left = x;
-        eyes[i].style.top = y;
-        eyes[i].style.transform = `translate(-${x}, -${y})`;
-      }
+      const rect = eyeRef.current.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      const deltaX = event.clientX - centerX;
+      const deltaY = event.clientY - centerY;
+      const angle = Math.atan2(deltaY, deltaX);
+
+      const eyeBall = eyeRef.current.querySelector('.eyeBall');
+      eyeBall.style.transform = `translate(${Math.cos(angle) * 5}px, ${Math.sin(angle) * 5}px)`;
     };
 
     document.addEventListener('mousemove', handleMouseMove);
@@ -22,17 +27,10 @@ const EyesComponent = () => {
   }, []);
 
   return (
-    <div className="eye">
-      <img
-        src={`${process.env.PUBLIC_URL}/eye.png`}
-        alt="Left Eye"
-        className="leftEye"
-      />
-      <img
-        src={`${process.env.PUBLIC_URL}/eye.png`}
-        alt="Right Eye"
-        className="rightEye"
-      />
+    <div className="eyeContainer">
+      <div className="eye" ref={eyeRef}>
+        <div className="eyeBall"></div>
+      </div>
     </div>
   );
 };

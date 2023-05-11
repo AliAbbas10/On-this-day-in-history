@@ -152,7 +152,7 @@ button {
 
 }
 
-.rightEye{
+/* .rightEye{
     position: absolute;
     width: 12px;
     margin-left: 470px;
@@ -163,7 +163,47 @@ button {
     position: absolute;
     width: 12px;
     margin-left: 435px;
-}
+} */
+
+/* .eyeContainer {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 40px;
+  } */
+  
+  .eye {
+    position: absolute;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    margin-left: 445px;
+    margin-top: -35px;
+
+  }
+  
+  /* .eyeBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  } */
+  
+  .eyeBall {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8.3px;
+    height: 8.3px;
+    background-color: black;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
 
 @media screen and (max-width: 1185px) {
     .welcome-page {
