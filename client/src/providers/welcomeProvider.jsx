@@ -15,7 +15,7 @@ export const WelcomeProvider = ({ children }) => {
     };
 
     return (
-        <WelcomeContext.Provider value={{ message: state.message, randomNum: state.randomNum, updateMessage }}>
+        <WelcomeContext.Provider value={{ ...state, updateMessage }}>
         {children}
         </WelcomeContext.Provider>
     );

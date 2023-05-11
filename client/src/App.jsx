@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { WelcomeProvider } from './providers/welcomeProvider';
 import WelcomePage from './components/WelcomePage';
-import MainPage from './components/MainPage';
+import OtdPage from './components/otdPage';
 import HistoryProvider from './providers/historyProvider'; // Make sure to import HistoryProvider
 
 function App() {
@@ -13,7 +13,8 @@ function App() {
           <HistoryProvider>
             <Routes>
               <Route exact path="/" element={<WelcomePage />} />
-              <Route path="/main" element={<MainPage />} />
+              <Route path="/otd" element={<OtdPage />} />
+              <Route path="/otd/:month/:day" element={<OtdPage />} />
             </Routes>
           </HistoryProvider>
         </Router>

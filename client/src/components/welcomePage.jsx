@@ -1,23 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { WelcomeContext } from '../contexts/welcomeContext';
 
 const WelcomePage = () => {
-  const { message, updateMessage } = React.useContext(WelcomeContext);
+  const [hoverIndex, setHoverIndex] = useState(-1);
+  const [selectedMonth, setSelectedMonth] = useState('');
+  const [selectedDay, setSelectedDay] = useState('');
+
+  const handleMonthChange = (event) => {
+    setSelectedMonth(event.target.value);
+  };
+
+  const handleDayChange = (event) => {
+    setSelectedDay(event.target.value);
+  };
+
   const navigate = useNavigate();
-  const [hoverIndex, setHoverIndex] = React.useState(-1);
   const title = 'ON THIS DAY IN HISTORY';
 
   const goToMainPage = () => {
-    navigate('/main');
+    navigate('/otd');
   };
 
-  const handleUpdateMessage = () => {
-    const newRandomNum = Math.floor(Math.random() * 100);
-    const newMessage = `Hello, welcome to the Welcome to Page ${newRandomNum}.`;
-    updateMessage(newMessage, newRandomNum);
+  const goToSelectedDay = () => {
+    navigate(`/otd/${selectedMonth}/${selectedDay}`);
   };
   
+  const months = [
+    'January', 'February', 'March', 'April', 'May', 'June', 'July',
+    'August', 'September', 'October', 'November', 'December',
+  ];
+
   return (
     <div className="welcome-page">
       <div id="welcomeTitle">
@@ -42,11 +54,35 @@ const WelcomePage = () => {
           )
         ))}
       </div>
-      <p id='welcomeMessageP'>{message}</p>
-      {/* <button onClick={handleUpdateMessage}>Update message</button> */}
-      <button onClick={goToMainPage}>Go to Main Page</button>
+      <button onClick={goToMainPage}>On this day</button>
+      <span id="orSpan" style={{fontSize: "30px", fontFamily: "serif"}}> or </span>
+      <span id="chooseDay" style={{ fontSize: '30px', fontFamily: 'serif', fontWeight: 'bold' }}> Choose a day </span>
+      <div className={"dateSelector"}>
+        <select
+          value={selectedMonth}
+          onChange={handleMonthChange}
+          className={"selectMonth"}
+        >
+          <option value="">Select Month</option>
+          {months.map((month, index) => (
+            <option key={index} value={month}>{month}</option>
+          ))}
+        </select>
+        <select
+          value={selectedDay}
+          onChange={handleDayChange}
+          className={"selectDay"}
+          >
+          <option value="">Select Day</option>
+          {Array.from({ length: 31 }, (_, i) => i + 1).map((day) => (
+            <option key={day} value={day}>{day}</option>
+          ))}
+        </select>
+        <button id= "goButton" onClick={goToSelectedDay}>Go</button>
+      </div>
     </div>
   );
 };
+
 
 export default WelcomePage;
