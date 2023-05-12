@@ -7,7 +7,6 @@ import HistoryProvider from './providers/historyProvider'; // Make sure to impor
 
 function App() {
   return (
-    <WelcomeProvider>
       <div className="App">
         <Router>
           <HistoryProvider>
@@ -19,7 +18,6 @@ function App() {
           </HistoryProvider>
         </Router>
       </div>
-    </WelcomeProvider>
   );
 }
 
