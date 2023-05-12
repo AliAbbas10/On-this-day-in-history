@@ -1,10 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import EyesComponent from "../components/eyeComponent";
-import WelcomeTitle from "../components/welcomeTitle";
-import DateSelectProvider from "../providers/dateSelectProvider";
-import DateSelectComponent from "../components/dateSelectComponent";
+import EyesComponent from "../components/EyeComponent";
+import WelcomeTitle from "../components/WelcomeTitle";
+import DateSelectComponent from "../components/DateSelectComponent";
 
 const WelcomePage = () => {
   const navigate = useNavigate();
@@ -14,7 +13,6 @@ const WelcomePage = () => {
   };
 
   return (
-    <DateSelectProvider>
       <div className="welcome-page">
         <WelcomeTitle />
         <button onClick={goToMainPage}>On this day</button>
@@ -42,7 +40,6 @@ const WelcomePage = () => {
         />
         <EyesComponent />
       </div>
-    </DateSelectProvider>
   );
 };
 

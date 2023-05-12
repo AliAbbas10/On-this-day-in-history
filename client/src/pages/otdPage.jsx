@@ -1,5 +1,5 @@
 import { useContext, useEffect} from 'react';
-import { HistoryContext } from '../contexts/historyContext';
+import { HistoryContext } from '../contexts/HistoryContext';
 import { useParams } from 'react-router-dom';
 
 const OtdPage = () => {
