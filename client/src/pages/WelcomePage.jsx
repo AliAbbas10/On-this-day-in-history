@@ -38,7 +38,7 @@ const WelcomePage = () => {
           src={`${process.env.PUBLIC_URL}/herodotus-no-eyes.png`}
           alt="herodotus"
         />
-        <EyesComponent />
+        {/* <EyesComponent /> */}
       </div>
   );
 };

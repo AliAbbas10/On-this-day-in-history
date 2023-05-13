@@ -9,20 +9,20 @@ const WelcomeTitle = () =>{
             <div id="welcomeTitle">
                 {title.split('').map((letter, index) => (
                     letter === ' ' ? (
-                        <span key={index} className="titleSpace">&nbsp;</span>) : (
-                        <span
-                        key={index}
-                        className={`titleLetter ${
-                            hoverIndex === index ? 'hovered' : ''} 
-                            ${hoverIndex === index + 1 ? 'before' : ''
-                        } 
-                        ${hoverIndex === index - 1 && index !== 0 ? 'next' : ''}`
-                        }
-                        onMouseEnter={() => setHoverIndex(index)}
-                        onMouseLeave={() => setHoverIndex(-1)}
-                        >
-                        {letter}
-                        </span>
+                    <span key={index} className="titleSpace">&nbsp;</span>) : (
+                    <span
+                    key={index}
+                    className={`titleLetter ${
+                        hoverIndex === index ? 'hovered' : ''} 
+                        ${hoverIndex === index + 1 ? 'before' : ''
+                    } 
+                    ${hoverIndex === index - 1 && index !== 0 ? 'next' : ''}`
+                    }
+                    onMouseEnter={() => setHoverIndex(index)}
+                    onMouseLeave={() => setHoverIndex(-1)}
+                    >
+                    {letter}
+                    </span>
                     )
                 ))}
             </div>

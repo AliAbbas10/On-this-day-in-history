@@ -35,31 +35,6 @@ transform: scale(1.5);
     transform: scale(1.2);
 }
 
-
-/* p {
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: 2rem;
-} */
-  
-/* button {
-    display: inline-block;
-    background-color: #3498db;
-    margin: 3px;
-    color: #fff;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 0.5rem;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-  
-button:hover {
-    background-color: #2980b9;
-} */
-
-
 /* from https://codepen.io/t_afif/pen/VwxbdpV */
 button {
     --b: 3px;   /* border thickness */
@@ -128,12 +103,6 @@ button {
     background-color: #fff;
 }
 
-/* .gif-container {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 120px;
-    margin-right: 120px;
-  } */
   
 .napoleon-gif{
     position: absolute;
@@ -152,58 +121,25 @@ button {
 
 }
 
-/* .rightEye{
-    position: absolute;
-    width: 12px;
-    margin-left: 470px;
-    margin-top: -70px;
+
+.eye {
+    position: relative;
+    width: 100px;
+    height: 50px;
+    background-color: rgb(255, 141, 141);
+    /* border-radius: 50%; */
+    margin-left: 600px;
 }
 
-.leftEye{
+.eyeBall {
     position: absolute;
-    width: 12px;
-    margin-left: 435px;
-} */
-
-/* .eyeContainer {
-    position: relative;
-    display: inline-block;
-    margin: 20px;
-    width: 25px;
-    height: 25px;
-    margin-bottom: 40px;
-  } */
-  
-  .eye {
-    position: absolute;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    overflow: hidden;
-    margin-left: 445px;
-    margin-top: -35px;
-
-  }
-  
-  /* .eyeBackground {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  } */
-  
-  .eyeBall {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 8.3px;
-    height: 8.3px;
+    width: 15px;
+    height: 15px;
     background-color: black;
     border-radius: 50%;
-    transform: translate(-50%, -50%);
-  }
+    top: 35%;
+    left: 43%;
+}
 
 @media screen and (max-width: 1185px) {
     .welcome-page {

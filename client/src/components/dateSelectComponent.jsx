@@ -3,10 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import { DateSelectContext } from "../contexts/DateSelectContext";
 
 const DateSelectComponent = () => {
-    const navigate = useNavigate();
-    const { state, dispatch } = useContext(DateSelectContext);
-  
-     const handleMonthChange = (event) => {
+  const navigate = useNavigate();
+  const { state, dispatch } = useContext(DateSelectContext);
+
+  const handleMonthChange = (event) => {
     dispatch({ type: "SET_MONTH", payload: event.target.value });
   };
 

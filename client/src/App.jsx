@@ -6,17 +6,18 @@ import { HistoryProvider } from "./contexts/HistoryContext"
 import { DateSelectProvider } from './contexts/DateSelectContext';
 
 function App() {
+  console.log("app render")
   return (
       <div className="App">
         <Router>
           <HistoryProvider>
-            <DateSelectProvider>  
+          <DateSelectProvider>  
               <Routes>
                 <Route exact path="/" element={<WelcomePage />} />
                 <Route path="/otd" element={<OtdPage />} />
                 <Route path="/otd/:month/:day" element={<OtdPage />} />
               </Routes>
-              </DateSelectProvider> 
+          </DateSelectProvider> 
           </HistoryProvider>
         </Router>
       </div>
