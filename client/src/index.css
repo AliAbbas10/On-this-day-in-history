@@ -144,9 +144,17 @@ button {
 .tab-container{
     position: relative;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-top: 100px;
+}
+
+.dateTitle{
+    font-size: 45px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: 'Monsieur La Doulaise', cursive;
 }
 
 .tabs {
@@ -154,9 +162,10 @@ button {
     width: 600px;
     height: 650px;
     background-color: rgb(255, 255, 255);
-    padding: 20px 30px;
+    /* padding: 20px 30px; */
     border-radius: 50px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    position: relative;
     overflow-y: auto;
 }
 
@@ -175,11 +184,15 @@ button {
 } */
 
 .tabs .tab-header {
-    height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     border-bottom: 1px solid rgba(71, 71, 71, 0.582);
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+    
 }
 
 .tabs .tab-header > div{
@@ -192,11 +205,12 @@ button {
     align-items: center; /* Add this */
     justify-content: center; /* Add this */
     transition: all 0.3s ease;
-    font-family: 'Monsieur La Doulaise', cursive;
-    font-weight: bold;
-    font-size: xx-large;
-    border-radius: 0px 20px;
-    box-shadow: rgba(119, 119, 119, 0.25) 0px 5px 15px -12px inset, rgba(0, 0, 0, 0.3) 0px 9px 18px -18px inset;
+    /* font-family: 'Monsieur La Doulaise', cursive; */
+    font-family: 'Garamond', serif;
+    /* font-weight: bold; */
+    font-size: x-large;
+    border-radius: 10px;
+    box-shadow: rgba(119, 119, 119, 0.25) 0px 10px 15px -12px inset, rgba(0, 0, 0, 0.3) 0px 9px 18px -18px inset;
 }
 
 .tabs .tab-header > div:hover{
@@ -208,7 +222,7 @@ button {
     color: #000000;
     transition: all 0.3s ease;
     font-size:45px;
-    box-shadow: rgb(255, 255, 255) 0px 5px 15px -12px inset, rgb(255, 255, 255) 0px 9px 18px -18px inset;
+    box-shadow: rgba(255, 255, 255, 0.527) 0px 5px 15px -12px inset, rgb(255, 255, 255) 0px 9px 18px -18px inset;
 }
 
 .tabs .tab-header > div.active:hover{
@@ -216,10 +230,10 @@ button {
 }
 
 .tab-body{
-    text-align: justify;
+    text-align: center;
     font-family: 'Times New Roman', Times, serif;
     margin: 20px;
-    font-size: larger;
+    font-size: x-large;
 }
 
 .right-pillar,
@@ -243,7 +257,32 @@ button {
     left: calc(50% - 475px); /* Add this to position the left pillar to the left of the tabs */
 }
 
-
+.loading-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  .loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 @media screen and (max-width: 1185px) {
     .welcome-page {
     padding: 2rem;

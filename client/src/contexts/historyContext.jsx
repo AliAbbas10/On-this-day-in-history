@@ -26,7 +26,7 @@ export const HistoryProvider = ({ children }) => {
     lastFetched: null,
   });
 
-  const fetchData = async (month, day) => {
+  const fetchData = async (month, day, signal) => {
     console.log("fetching");
     const requestKey = `${month}_${day}`;
 
@@ -37,7 +37,8 @@ export const HistoryProvider = ({ children }) => {
 
     try {
       const response = await fetch(
-        `http://localhost:3001/wikipedia/${month}/${day}`
+        `http://localhost:5000/data/${month}/${day}`,
+        { signal }
       );
       if (!response.ok) {
         throw new Error(`HTTP error: ${response.status}`);
@@ -46,8 +47,12 @@ export const HistoryProvider = ({ children }) => {
       console.log(data);
       dispatch({ type: "SET_DATA", payload: data, lastFetched: requestKey });
     } catch (error) {
-      console.error("Error fetching Wikipedia data:", error);
+      if (error.name === 'AbortError') {
+        console.log('Fetch aborted');
+      } else {
+      console.error("Error fetching data:", error);
       dispatch({ type: "SET_ERROR", payload: error });
+      }
     }
   };
 

@@ -1,12 +1,12 @@
 const express = require('express');
 const cors = require('cors');
-const wikipediaRouter = require('./routes/wikipediaRoutes');
+const DataRouter = require('./routes/fetchDataRoutes');
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/wikipedia', wikipediaRouter);
+app.use('/data', DataRouter);
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
