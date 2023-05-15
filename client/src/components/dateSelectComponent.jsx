@@ -1,8 +1,9 @@
 import { useContext } from "react";
 import { useNavigate } from 'react-router-dom';
-import { DateSelectContext } from "../contexts/DateSelectContext";
 
-const DateSelectComponent = () => {
+import { DateSelectContext } from "../Contexts/DateSelectContext.jsx";
+
+const DateSelect = () => {
   const navigate = useNavigate();
   const { state, dispatch } = useContext(DateSelectContext);
 
@@ -15,7 +16,7 @@ const DateSelectComponent = () => {
   };
 
   const goToSelectedDay = () => {
-    navigate(`/otd/${state.selectedMonth}/${state.selectedDay}`);
+    navigate(`/otdih/${state.selectedMonth}/${state.selectedDay}`);
   };
 
   return (
@@ -51,4 +52,4 @@ const DateSelectComponent = () => {
   );
 };
 
-export default DateSelectComponent;
+export default DateSelect;

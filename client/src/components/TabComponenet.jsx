@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect } from "react";
-import { HistoryContext } from '../contexts/HistoryContext';
+import { HistoryContext } from '../Contexts/HistoryContext.jsx';
 
 const Tabs = ({ dateKey }) => {
   const [activeTab, setActiveTab] = useState("Events");

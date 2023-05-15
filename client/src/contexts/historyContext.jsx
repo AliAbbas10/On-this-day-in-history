@@ -36,7 +36,7 @@ export const HistoryProvider = ({ children }) => {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/data/${month}/${day}`,
+        `https://otdih-api.onrender.com/data/${month}/${day}`,
         { signal }
       );
       if (!response.ok) {
@@ -61,6 +61,3 @@ export const HistoryProvider = ({ children }) => {
     </HistoryContext.Provider>
   );
 };
-
-
-
