@@ -31,7 +31,6 @@ export const HistoryProvider = ({ children }) => {
     const requestKey = `${month}_${day}`;
 
     if (state.lastFetched === requestKey) {
-      // If data already exists for the given month and day, don't fetch it again
       return;
     }
 
@@ -65,35 +64,3 @@ export const HistoryProvider = ({ children }) => {
 
 
 
-//   const fetchData = async (month, day) => {
-//     try {
-//       const storageKey = `history_${month}_${day}`;
-//       const storedData = localStorage.getItem(storageKey);
-  
-//       if (storedData) {
-//         dispatch({ type: "SET_DATA", payload: JSON.parse(storedData) });
-//         return;
-//       }
-  
-//       const abortController = new AbortController();
-//       const response = await fetch(
-//         `http://localhost:3001/wikipedia/${month}/${day}`,
-//         { signal: abortController.signal }
-//       );
-  
-//       if (!response.ok) {
-//         throw new Error(`HTTP error: ${response.status}`);
-//       }
-  
-//       const data = await response.json();
-//       localStorage.setItem(storageKey, JSON.stringify(data));
-//       dispatch({ type: "SET_DATA", payload: data });
-//     } catch (error) {
-//       if (error.name === "AbortError") {
-//         console.log("Fetch aborted");
-//       } else {
-//         console.error("Error fetching Wikipedia data:", error);
-//         dispatch({ type: "SET_ERROR", payload: error });
-//       }
-//     }
-//   };

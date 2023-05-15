@@ -37,8 +37,8 @@ transform: scale(1.5);
 
 /* from https://codepen.io/t_afif/pen/VwxbdpV */
 button {
-    --b: 3px;   /* border thickness */
-    --s: 0em; /* size of the corner */
+    --b: 3px;   
+    --s: 0em; 
     --c: #000000;
 
     padding: calc(.05em + var(--s)) calc(.3em + var(--s));
@@ -121,26 +121,6 @@ button {
 
 }
 
-
-/* .eye {
-    position: relative;
-    width: 100px;
-    height: 50px;
-    background-color: rgb(255, 141, 141);
-    /* border-radius: 50%; 
-    margin-left: 600px;
-} */
-
-/* .eyeBall {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: black;
-    border-radius: 50%;
-    top: 35%;
-    left: 43%;
-} */
-
 .tab-container{
     position: relative;
     display: flex;
@@ -162,7 +142,6 @@ button {
     width: 600px;
     height: 650px;
     background-color: rgb(255, 255, 255);
-    /* padding: 20px 30px; */
     border-radius: 50px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
     position: relative;
@@ -178,10 +157,6 @@ button {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 3px;
 }
-
-/* .tabs::-webkit-scrollbar-track {
-    background-color: transparent;
-} */
 
 .tabs .tab-header {
     display: flex;
@@ -201,13 +176,11 @@ button {
     margin: 5px;
     height: 50px;
     width: 90px;
-    display: flex; /* Add this */
-    align-items: center; /* Add this */
-    justify-content: center; /* Add this */
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
     transition: all 0.3s ease;
-    /* font-family: 'Monsieur La Doulaise', cursive; */
     font-family: 'Garamond', serif;
-    /* font-weight: bold; */
     font-size: x-large;
     border-radius: 10px;
     box-shadow: rgba(119, 119, 119, 0.25) 0px 10px 15px -12px inset, rgba(0, 0, 0, 0.3) 0px 9px 18px -18px inset;
@@ -238,7 +211,7 @@ button {
 
 .right-pillar,
 .left-pillar {
-    position: absolute; /* Change from 'relative' to 'absolute' */
+    position: absolute; 
     height: 100%;
     opacity: 0.7;
 }
@@ -246,15 +219,15 @@ button {
 .right-pillar {
     order: 3;
     margin-left: 40px;
-    top: 0; /* Add this to position the right pillar at the top */
-    left: calc(50% + 300px); /* Add this to position the right pillar to the right of the tabs */
+    top: 0; 
+    left: calc(50% + 300px);
     background-image: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 }
 
 .left-pillar {
     order: 1;
-    top: 0; /* Add this to position the left pillar at the top */
-    left: calc(50% - 475px); /* Add this to position the left pillar to the left of the tabs */
+    top: 0; 
+    left: calc(50% - 475px);
 }
 
 .loading-screen {
@@ -303,11 +276,6 @@ button {
     width: 0.6em;
     }
     
-    /* p {
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-    } */
-    
     button {
         font-size: 1.5rem;
         margin: 0.25em;
@@ -355,11 +323,6 @@ button {
         font-size: 1em;
         width: 0.5em;
     }
-    
-    /* p {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    } */
     
     button {
         font-size: 1.2rem;
@@ -415,11 +378,6 @@ button {
         font-size: 1.1em;
         width: 0.55em;
     }
-    
-    /* p {
-        font-size: 1.1rem;
-        margin-bottom: 0.75rem;
-    } */
     
     button {
         font-size: 1.35rem;

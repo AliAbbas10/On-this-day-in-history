@@ -26,23 +26,6 @@ const Tabs = ({ dateKey }) => {
     </>
   );
 
-//   const renderHistory = () => {
-//     const storedData = localStorage.getItem(dateKey);
-//     if (storedData) {
-//       const history = JSON.parse(storedData);
-//       return (
-//         <>
-//           <p>Events: {history.events}</p>
-//           <p>Births: {history.births}</p>
-//           <p>Deaths: {history.deaths}</p>
-//         </>
-//       );
-//     } else {
-//       return <p>No history data found for the selected date.</p>;
-//     }
-//   };
-
-
     return (
         <>
             <div className='tabs'>
@@ -56,15 +39,11 @@ const Tabs = ({ dateKey }) => {
                     <div className={activeTab === 'Deaths' ? 'active' : ''} onClick={() => handleClick("Deaths")}>
                         <p>Deaths</p>
                     </div>
-                    {/* <div className={activeTab === 'History' ? 'active' : ''} onClick={() => handleClick("History")}>
-                        <p>History</p>
-                    </div> */}
                 </div>
                 <div className='tab-body'>
                     {activeTab === 'Events' && renderItems("Events", data.summaries.events)}
                     {activeTab === 'Births' && renderItems("Births", data.summaries.births)}
                     {activeTab === 'Deaths' && renderItems("Deaths", data.summaries.deaths)}
-                    {/* {activeTab === 'History' && renderHistory()} */}
                 </div>
             </div>
         </>
