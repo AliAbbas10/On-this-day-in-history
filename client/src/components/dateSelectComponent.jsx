@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 console.log("import { DateSelectContext } from ../Contexts/DateSelectContext.jsx");
 import { DateSelectContext } from "../Contexts/DateSelectContext.jsx";
 
-const DateSelectComponent = () => {
+const DateSelect = () => {
   const navigate = useNavigate();
   const { state, dispatch } = useContext(DateSelectContext);
 
@@ -53,4 +53,4 @@ const DateSelectComponent = () => {
   );
 };
 
-export default DateSelectComponent;
+export default DateSelect;

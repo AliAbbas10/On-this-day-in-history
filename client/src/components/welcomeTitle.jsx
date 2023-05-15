@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const WelcomeTitle = () =>{
+const WelcomeTitleComponent = () =>{
     const [hoverIndex, setHoverIndex] = useState(-1);
     const title = 'ON THIS DAY IN HISTORY';
 
@@ -30,4 +30,4 @@ const WelcomeTitle = () =>{
     )
 }
 
-export default WelcomeTitle;
+export default WelcomeTitleComponent;
