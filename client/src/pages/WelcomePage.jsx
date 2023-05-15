@@ -1,9 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import EyesComponent from "../components/EyeComponent";
-import WelcomeTitle from "../components/WelcomeTitle.jsx";
-import DateSelectComponent from "../components/DateSelectComponent.jsx";
+import EyesComponent from "../Components/EyeComponent";
+import WelcomeTitle from "../Components/WelcomeTitle.jsx";
+import DateSelectComponent from "../Components/DateSelectComponent.jsx";
 
 const WelcomePage = () => {
   const navigate = useNavigate();

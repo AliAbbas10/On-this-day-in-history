@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { useNavigate } from 'react-router-dom';
-import { DateSelectContext } from "../contexts/DateSelectContext.jsx";
+
+console.log("import { DateSelectContext } from ../Contexts/DateSelectContext.jsx");
+import { DateSelectContext } from "../Contexts/DateSelectContext.jsx";
 
 const DateSelectComponent = () => {
   const navigate = useNavigate();
