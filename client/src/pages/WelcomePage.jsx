@@ -1,5 +1,7 @@
+console.log("import React from react");
 import React from "react";
-import { useNavigate } from "react-router-dom";
+console.log("import {useNavigate} from react-router-dom");
+import {useNavigate} from "react-router-dom";
 
 // import EyesComponent from "../Components/EyeComponent";
 console.log("import {WelcomeTitleComponenet} from ../Components/WelcomeTitle.jsx");
