@@ -9,7 +9,7 @@ const WelcomePage = () => {
   const navigate = useNavigate();
 
   const goToMainPage = () => {
-    navigate("/");
+    navigate("/today");
   };
 
   return (

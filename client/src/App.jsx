@@ -14,7 +14,7 @@ function App() {
           <DateSelectProvider>  
               <Routes>
                 <Route exact path="/otdih" element={<WelcomePage />} />
-                <Route path="/" element={<OtdPage />} />
+                <Route path="/today" element={<OtdPage />} />
                 <Route path="/otdih/:month/:day" element={<OtdPage />} />
               </Routes>
           </DateSelectProvider> 
