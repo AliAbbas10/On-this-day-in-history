@@ -1,12 +1,8 @@
-console.log("import React from react");
 import React from "react";
-console.log("import {useNavigate} from react-router-dom");
 import {useNavigate} from "react-router-dom";
 
 // import EyesComponent from "../Components/EyeComponent";
-console.log("import {WelcomeTitleComponenet} from ../Components/WelcomeTitle.jsx");
 import WelcomeTitleComponenet from "../Components/WelcomeTitle.jsx";
-console.log("import {DateSelect} from ../Components/DateSelectComponent.jsx");
 import DateSelect from "../Components/DateSelectComponent.jsx";
 
 const WelcomePage = () => {
