@@ -13,9 +13,9 @@ function App() {
           <HistoryProvider>
           <DateSelectProvider>  
               <Routes>
-                <Route exact path="/" element={<WelcomePage />} />
-                <Route path="/otd" element={<OtdPage />} />
-                <Route path="/otd/:month/:day" element={<OtdPage />} />
+                <Route exact path="/otdih" element={<WelcomePage />} />
+                <Route path="/" element={<OtdPage />} />
+                <Route path="/otdih/:month/:day" element={<OtdPage />} />
               </Routes>
           </DateSelectProvider> 
           </HistoryProvider>

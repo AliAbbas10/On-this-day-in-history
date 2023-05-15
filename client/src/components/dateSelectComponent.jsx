@@ -16,7 +16,7 @@ const DateSelect = () => {
   };
 
   const goToSelectedDay = () => {
-    navigate(`/otd/${state.selectedMonth}/${state.selectedDay}`);
+    navigate(`/otdih/${state.selectedMonth}/${state.selectedDay}`);
   };
 
   return (
