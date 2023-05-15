@@ -1,0 +1,21 @@
+{
+  "name": "otdih",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd server && npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AliAbbas10/otdih.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AliAbbas10/otdih/issues"
+  },
+  "homepage": "https://github.com/AliAbbas10/otdih#readme"
+}
