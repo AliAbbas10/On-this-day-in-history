@@ -10,11 +10,18 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.1",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
+    "svgo": "^2.3.1",
     "web-vitals": "^2.1.4"
   },
   "optionalDependencies": {
     "fsevents": "*"
+  },
+  "resolutions": {
+    "rollup-plugin-terser": "8.0.0",
+    "sourcemap-codec": "2.0.0",
+    "svgo": "2.3.1",
+    "stable": "0.1.8"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -39,5 +46,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "npm-force-resolutions": "^0.0.10"
   }
 }
