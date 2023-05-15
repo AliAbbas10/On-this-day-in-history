@@ -1,18 +1,18 @@
-import { useContext, useEffect, useRef, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React from "react";
+import { useParams } from "react-router-dom";
 
-import { HistoryContext } from '../Contexts/HistoryContext.jsx';
-import Tabs from '../Components/TabComponenet.jsx';
-import LoadingScreen from '../Components/LoadingComponent.jsx';
+import { HistoryContext } from "../Contexts/HistoryContext.jsx";
+import Tabs from "../Components/TabComponenet.jsx";
+import LoadingScreen from "../Components/LoadingComponent.jsx";
 
 const OtdPage = () => {
   console.log("otd rendered");
-  const { data, error, fetchData } = useContext(HistoryContext);
+  const { data, error, fetchData } = React.useContext(HistoryContext);
   const { month, day } = useParams();
-  const [isLoading, setIsLoading] = useState(false);
-  const [dateKey, setDateKey] = useState('');
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [dateKey, setDateKey] = React.useState('');
 
-  useEffect(() => {
+  React.useEffect(() => {
     const controller = new AbortController(); 
 
     const fetchAndRenderData = async (month, day, signal) => {
