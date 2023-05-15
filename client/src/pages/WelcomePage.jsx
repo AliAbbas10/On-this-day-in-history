@@ -2,8 +2,10 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 // import EyesComponent from "../Components/EyeComponent";
-import WelcomeTitleComponenet from "../Components/WelcomeTitle.jsx";
-import DateSelect from "../Components/DateSelectComponent.jsx";
+console.log("import {WelcomeTitleComponenet} from ../Components/WelcomeTitle.jsx");
+import {WelcomeTitleComponenet} from "../Components/WelcomeTitle.jsx";
+console.log("import {DateSelect} from ../Components/DateSelectComponent.jsx");
+import {DateSelect} from "../Components/DateSelectComponent.jsx";
 
 const WelcomePage = () => {
   const navigate = useNavigate();
