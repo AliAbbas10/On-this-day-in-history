@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import WelcomePage from './pages/WelcomePage';
-import OtdPage from './pages/OtdPage';
-import { HistoryProvider } from "./contexts/HistoryContext"
-import { DateSelectProvider } from './contexts/DateSelectContext';
+import WelcomePage from './pages/WelcomePage.jsx';
+import OtdPage from './pages/OtdPage.jsx';
+import { HistoryProvider } from "./contexts/HistoryContext.jsx"
+import { DateSelectProvider } from './contexts/DateSelectContext.jsx';
 
 function App() {
   console.log("app render")

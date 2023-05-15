@@ -1,9 +1,9 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { HistoryContext } from '../contexts/HistoryContext';
-import Tabs from '../components/TabComponenet';
-import LoadingScreen from '../components/LoadingComponent';
+import { HistoryContext } from '../contexts/HistoryContext.jsx';
+import Tabs from '../components/TabComponenet.jsx';
+import LoadingScreen from '../components/LoadingComponent.jsx';
 
 const OtdPage = () => {
   console.log("otd rendered");
