@@ -330,8 +330,8 @@ button {
         background-color: #ffffff;
         font-family: Arial, sans-serif;
         width: auto;
-        height: 750px;
-        margin-top: 10px;
+        height: 550px;
+        margin-top: 20px;
     }
       
     #welcomeTitle {
@@ -339,6 +339,7 @@ button {
         margin-bottom: 1rem;
         font-family: 'Times New Roman', Times, serif;
         display: inline-flex;
+        color: #000000;
     }
     
     .titleSpace {
@@ -351,6 +352,7 @@ button {
         width: 0.77em;
         text-align: center;
         transition: transform 0.25s ease;
+        color: #000000;
     }
       
     .titleLetter.hovered {
@@ -397,6 +399,7 @@ button {
         display: flex;
         align-items: center;
         gap: 10px;
+        color: #000000;
     }
     
     .selectMonth, .selectDay {
@@ -408,6 +411,7 @@ button {
         cursor: pointer;
         outline: none;
         background-color: #fff;
+        color: #000000;
     }
     
     .selectMonth:hover, .selectDay:hover {
@@ -418,11 +422,13 @@ button {
         width: 50px;
         height: 40px;
         font-size: 1.3rem;
+        color: #000000;
     }
     
     #orSpan, #chooseDay{
         margin: 2px;
         font-size: 20px;
+        color: #000000;
     }
     
     .dateSelector select option {
@@ -432,9 +438,9 @@ button {
       
     .napoleon-gif{
         position: absolute;
-        width: 350px;
+        width: 300px;
         margin-left: -140px;
-        margin-bottom: -600px;
+        margin-bottom: -500px;
         border-radius: 200px;
         overflow: hidden;
     }

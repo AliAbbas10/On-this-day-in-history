@@ -41,12 +41,12 @@ const Tabs = ({ dateKey }) => {
                     </div>
                 </div>
                 <div className='tab-body'>
-                    {activeTab === 'Events' }
+                    {/* {activeTab === 'Events' }
                     {activeTab === 'Births' }
-                    {activeTab === 'Deaths' }
-                    {/* {activeTab === 'Events' && renderItems("Events", data.summaries.events)}
+                    {activeTab === 'Deaths' } */}
+                    {activeTab === 'Events' && renderItems("Events", data.summaries.events)}
                     {activeTab === 'Births' && renderItems("Births", data.summaries.births)}
-                    {activeTab === 'Deaths' && renderItems("Deaths", data.summaries.deaths)} */}
+                    {activeTab === 'Deaths' && renderItems("Deaths", data.summaries.deaths)}
                     
                 </div>
             </div>

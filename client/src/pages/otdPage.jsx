@@ -41,9 +41,9 @@ const OtdPage = () => {
     return <div>Error fetching data: {error.message}</div>;
   }
 
-  // if (!data || !data.summaries || isLoading) {
-  //   return <div><LoadingScreen /></div>;
-  // }
+  if (!data || !data.summaries || isLoading) {
+    return <div><LoadingScreen /></div>;
+  }
 
   return (
     <div>
