@@ -460,7 +460,7 @@ button {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 45px;
+        margin-top: 25px;
     }
     
     .dateTitle{
@@ -476,7 +476,7 @@ button {
     .tabs {
         order: 2;
         width: 360px;
-        height: 690px;
+        height: 460px;
         background-color: rgb(255, 255, 255);
         border-radius: 15px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.678), 0 1px 3px rgba(0, 0, 0, 0.08);
@@ -499,6 +499,7 @@ button {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        border-radius: 15px 15px 0px 0px;
         border-bottom: 2px solid rgba(0, 0, 0, 0.582);
         position: sticky;
         top: 0;
@@ -519,7 +520,7 @@ button {
         transition: all 0.3s ease;
         font-family: 'Garamond', serif;
         font-size: x-large;
-        border-radius: 10px;
+        border-radius: 15px;
         color: #969696;
         /* box-shadow: rgba(119, 119, 119, 0.25) 0px 10px 15px -12px inset, rgba(0, 0, 0, 0.3) 0px 9px 18px -18px inset; */
     }
@@ -545,6 +546,7 @@ button {
         font-family: 'Times New Roman', Times, serif;
         margin: 20px;
         font-size: x-large;
+        border-radius: 15px;
     }
     
     .right-pillar,
