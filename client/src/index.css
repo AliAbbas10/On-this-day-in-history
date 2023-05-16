@@ -476,7 +476,7 @@ button {
     .tabs {
         order: 2;
         width: 360px;
-        height: 460px;
+        height: 500px;
         background-color: rgb(255, 255, 255);
         border-radius: 15px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.678), 0 1px 3px rgba(0, 0, 0, 0.08);
@@ -505,7 +505,6 @@ button {
         top: 0;
         background-color: white;
         z-index: 1;
-        
     }
     
     .tabs .tab-header > div{
@@ -533,7 +532,7 @@ button {
     .tabs .tab-header > div.active{
         color: #000000;
         transition: all 0.3s ease;
-        font-size:45px;
+        font-size:40px;
         box-shadow: rgba(255, 255, 255, 0.527) 0px 5px 15px -12px inset, rgb(255, 255, 255) 0px 9px 18px -18px inset;
     }
     
@@ -545,7 +544,7 @@ button {
         text-align: center;
         font-family: 'Times New Roman', Times, serif;
         margin: 20px;
-        font-size: x-large;
+        font-size: large;
         border-radius: 15px;
     }
     
