@@ -1,6 +1,5 @@
 const { Configuration, OpenAIApi } = require("openai");
 require("dotenv").config();
-let fetch;
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_KEY
@@ -8,6 +7,7 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
+let fetch;
 (async () => {
   fetch = (await import('node-fetch')).default;
 })();
@@ -34,8 +34,6 @@ async function getRandomSummary(items) {
   return await generateSummary(randomItem);
 }
 
-
-
 const organizeData = (content) => {
   const organizedData = {
     events: [],
@@ -49,12 +47,9 @@ const organizeData = (content) => {
   lines.forEach(line => {
     if (line.startsWith('== ')) {
       currentCategory = line.slice(3, -3).toLowerCase();
-    } else if (line.startsWith('=== ')) {
-      if (organizedData[currentCategory]) {
-        const item = line.slice(4, -4);
-        organizedData[currentCategory].push(item);
-      }
-    } else if (currentCategory && line.trim() && organizedData[currentCategory]) {
+    } 
+
+    else if (currentCategory && line.trim()  && !line.startsWith('=== ') && organizedData[currentCategory]) {
       organizedData[currentCategory].push(line);
     }
   });
@@ -87,6 +82,7 @@ exports.fetchDataSummary = async (req, res) => {
     const pages = data.query.pages;
     const page = pages[0];
     const organizedContent = organizeData(page.extract);
+    console.log(organizedContent);
 
     const [eventsSummary, birthsSummary, deathsSummary] = await Promise.all([
       getRandomSummary(organizedContent.events),
