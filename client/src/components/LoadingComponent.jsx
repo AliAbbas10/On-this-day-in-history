@@ -4,7 +4,8 @@ const LoadingScreen = () => {
   return (
     <div className="loading-screen">
       <div className="loading-spinner"></div>
-      <p>Loading data...</p>
+      <p>Please wait...</p>
+      <p>Loading may take a minute</p>
     </div>
   );
 };
