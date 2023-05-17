@@ -82,7 +82,6 @@ exports.fetchDataSummary = async (req, res) => {
     const pages = data.query.pages;
     const page = pages[0];
     const organizedContent = organizeData(page.extract);
-    console.log(organizedContent);
 
     const [eventsSummary, birthsSummary, deathsSummary] = await Promise.all([
       getRandomSummary(organizedContent.events),
