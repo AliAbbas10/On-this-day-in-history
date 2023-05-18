@@ -146,6 +146,7 @@ transform: scale(1.5);
     height: 25px;
     border-radius: 10px;
     border: 1px solid black;
+    color: #000000;
     margin-right: 520px;
     margin-bottom: 0px;
 }
@@ -331,13 +332,12 @@ transform: scale(1.5);
     }
 } 
 
-@media screen and (max-width: 840px ) {
+@media screen and (max-width: 950px ) {
     body{
         background-image: url('../public/worldmap.jpg');
         background-size:auto;
         position:fixed;
         margin-left: 18px;
-        width: 800px;
     }
 
     .welcome-page {
@@ -484,6 +484,18 @@ transform: scale(1.5);
         margin-top: 70px;
     }
     
+    .infoButton{
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        color: #000000;
+        height: 25px;
+        border-radius: 10px;
+        border: 1px solid black;
+        margin-right: 330px;
+        margin-bottom: 0px;
+    }
+
     .dateTitle{
         font-size: 70px;
         margin-top: 5px;
@@ -495,7 +507,7 @@ transform: scale(1.5);
     
     .tabs {
         order: 2;
-        width: 650px;
+        width: 90%;
         height: 700px;
         background-color: rgb(255, 255, 255);
         border-radius: 15px;
@@ -778,6 +790,7 @@ transform: scale(1.5);
         display: flex;
         align-items: center;
         background-color: #fff;
+        color: #000000;
         height: 25px;
         border-radius: 10px;
         border: 1px solid black;
@@ -793,6 +806,7 @@ transform: scale(1.5);
         margin-bottom: 5px;
         
     }
+
     
     .tabs {
         order: 2;
