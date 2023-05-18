@@ -285,12 +285,10 @@ transform: scale(1.5);
 
 
 @media screen and (max-width: 1185px) {
-    .welcome-page {
-    padding: 2rem;
-    }
+
     
     #welcomeTitle {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 0.5rem;
     }
     
@@ -332,29 +330,14 @@ transform: scale(1.5);
     }
 } 
 
-@media screen and (max-width: 950px ) {
-    body{
-        background-image: url('../public/worldmap.jpg');
-        background-size:auto;
-        position:fixed;
-        margin-left: 18px;
-    }
+@media screen and (max-width: 850px ) {
 
     .welcome-page {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: #ffffff;
-        font-family: Arial, sans-serif;
-        width: auto;
-        height: 850px;
-        margin-top: 20px;
-        margin-right: 16px;
-    }
+        padding: 2rem;
+        }
       
     #welcomeTitle {
-        font-size: 1.7rem;
+        font-size: 3vw;
         margin-bottom: 1rem;
         font-family: 'Times New Roman', Times, serif;
         display: inline-flex;
@@ -637,13 +620,13 @@ transform: scale(1.5);
 
 
 @media screen and (max-width: 480px ) {
-    body{
+    /* body{
         background-image: url('../public/worldmap.jpg');
         background-size:auto;
         position:fixed;
         height: 20px;
         width: 372px;
-    }
+    } */
 
     .welcome-page {
         display: flex;
@@ -658,7 +641,7 @@ transform: scale(1.5);
     }
       
     #welcomeTitle {
-        font-size: 0.85rem;
+        font-size: 3.4vw;
         margin-bottom: 1rem;
         font-family: 'Times New Roman', Times, serif;
         display: inline-flex;
@@ -736,6 +719,7 @@ transform: scale(1.5);
         outline: none;
         background-color: #fff;
         color: #000000;
+        margin-left: 2px;
     }
     
     .selectMonth:hover, .selectDay:hover {
