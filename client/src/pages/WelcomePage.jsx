@@ -15,7 +15,7 @@ const WelcomePage = () => {
   return (
       <div className="welcome-page">
         <WelcomeTitleComponenet />
-        <button onClick={goToMainPage}>On this day</button>
+        <button className="otdButton" onClick={goToMainPage}>On this day</button>
         <span id="orSpan" style={{ fontFamily: "serif" }}>
           or
         </span>

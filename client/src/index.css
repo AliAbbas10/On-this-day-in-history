@@ -41,7 +41,7 @@ transform: scale(1.5);
 }
 
 /* from https://codepen.io/t_afif/pen/VwxbdpV */
-button {
+.otdButton {
     --b: 3px;   
     --s: 0em; 
     --c: #000000;
@@ -57,13 +57,13 @@ button {
     color: #000000;
 }
 
-button:hover, button:focus-visible{
+.otdButton:hover, .otdButton:focus-visible{
     --_p: 0px;
     outline-color: var(--c);
     outline-offset: .05em;
 }
 
-button {
+.otdButton {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
     font-size: 2rem;
@@ -138,14 +138,25 @@ button {
     margin-top: 70px;
 }
 
+.infoButton{
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    background-color: #fff;
+    height: 25px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-right: 520px;
+    margin-bottom: 0px;
+}
+
 .dateTitle{
     font-size: 70px;
     margin-top: 5px;
     margin-bottom: 5px;
-    font-family: 'Monsieur La Doulaise', cursive;
-    font-weight: bolder;
+    font-family: 'Garamond';
     color: #fff;
-    text-shadow: 0px 0px white, -2px -2px #000000;
+    text-shadow: 0px 0px white, -3px -3px #000000;
 }
 
 .tabs {
@@ -372,7 +383,7 @@ button {
     }
     
     /* from https://codepen.io/t_afif/pen/VwxbdpV */
-    button {
+    .otdButton {
         --b: 3px;   
         --s: 0em; 
         --c: #000000;
@@ -388,13 +399,13 @@ button {
         color: #000000;
     }
     
-    button:hover, button:focus-visible{
+    .otdButton:hover, .otdButton:focus-visible{
         --_p: 0px;
         outline-color: var(--c);
         outline-offset: .05em;
     }
     
-    button {
+    .otdButton {
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-weight: bold;
         font-size: 1.5rem;
@@ -477,8 +488,7 @@ button {
         font-size: 70px;
         margin-top: 5px;
         margin-bottom: 5px;
-        font-family: 'Monsieur La Doulaise', cursive;
-        font-weight: bolder;
+        font-family: 'Garamond';
         color: #fff;
         text-shadow: 0px 0px white, -2px -2px #000000;
     }
@@ -620,7 +630,7 @@ button {
         background-size:auto;
         position:fixed;
         height: 20px;
-        width: 375px;
+        width: 372px;
     }
 
     .welcome-page {
@@ -636,7 +646,7 @@ button {
     }
       
     #welcomeTitle {
-        font-size: 0.93rem;
+        font-size: 0.85rem;
         margin-bottom: 1rem;
         font-family: 'Times New Roman', Times, serif;
         display: inline-flex;
@@ -665,7 +675,7 @@ button {
     }
     
     /* from https://codepen.io/t_afif/pen/VwxbdpV */
-    button {
+    .otdButton {
         --b: 3px;   
         --s: 0em; 
         --c: #000000;
@@ -681,13 +691,13 @@ button {
         color: #000000;
     }
     
-    button:hover, button:focus-visible{
+    .otdButton:hover, .otdButton:focus-visible{
         --_p: 0px;
         outline-color: var(--c);
         outline-offset: .05em;
     }
     
-    button {
+    .otdButton {
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-weight: bold;
         font-size: 1.5rem;
@@ -740,9 +750,9 @@ button {
       
     .napoleon-gif{
         position: absolute;
-        width: 300px;
-        margin-left: -140px;
-        margin-bottom: -500px;
+        width: 200px;
+        margin-left: -00px;
+        margin-bottom: -400px;
         border-radius: 200px;
         overflow: hidden;
     }
@@ -764,13 +774,23 @@ button {
         margin-top: 25px;
     }
     
+    .infoButton{
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        height: 25px;
+        border-radius: 10px;
+        border: 1px solid black;
+        margin-right: 330px;
+        margin-bottom: 0px;
+    }
+
     .dateTitle{
         font-size: 50px;
-        font-family: 'Monsieur La Doulaise', cursive;
-        font-weight: bolder;
+        font-family: 'Garamond';
         color: #fff;
         text-shadow: 0px 0px white, -2px -2px #000000;
-        margin-bottom: auto;
+        margin-bottom: 5px;
         
     }
     

@@ -45,7 +45,7 @@ const DateSelect = () => {
           </option>
         ))}
       </select>
-      <button id="goButton" onClick={goToSelectedDay}>
+      <button className="otdButton" id="goButton" onClick={goToSelectedDay}>
         Go
       </button>
     </>
