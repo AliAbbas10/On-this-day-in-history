@@ -5,7 +5,15 @@ export const HistoryContext = createContext();
 export const HistoryReducer = (state, action) => {
   switch (action.type) {
     case "SET_DATA":
-      return { ...state, data: action.payload, lastFetched: action.lastFetched };
+      return {
+        ...state,
+        data: action.payload,
+        lastFetched: action.lastFetched,
+        history: {
+          ...state.history,
+          [action.lastFetched]: action.payload, // Store the new data in the history field using the requestKey as the identifier
+        },
+      };
 
     case "SET_ERROR":
       return { ...state, error: action.payload };
@@ -22,6 +30,7 @@ export const HistoryProvider = ({ children }) => {
       births: [],
       deaths: [],
     },
+    history: {},
     error: null,
     lastFetched: null,
   });
@@ -29,11 +38,19 @@ export const HistoryProvider = ({ children }) => {
   const fetchData = async (month, day, signal) => {
     console.log("fetching");
     const requestKey = `${month}_${day}`;
-
+  
     if (state.lastFetched === requestKey) {
       return;
     }
-
+  
+    // Try to get data from localStorage first
+    const localData = localStorage.getItem(requestKey);
+    if (localData) {
+      const parsedData = JSON.parse(localData);
+      dispatch({ type: "SET_DATA", payload: parsedData, lastFetched: requestKey });
+      return;
+    }
+  
     try {
       const response = await fetch(
         `https://otdih-api.onrender.com/data/${month}/${day}`,
@@ -45,12 +62,15 @@ export const HistoryProvider = ({ children }) => {
       const data = await response.json();
       console.log(data);
       dispatch({ type: "SET_DATA", payload: data, lastFetched: requestKey });
+  
+      // Store data in localStorage
+      localStorage.setItem(requestKey, JSON.stringify(data));
     } catch (error) {
       if (error.name === 'AbortError') {
         console.log('Fetch aborted');
       } else {
-      console.error("Error fetching data:", error);
-      dispatch({ type: "SET_ERROR", payload: error });
+        console.error("Error fetching data:", error);
+        dispatch({ type: "SET_ERROR", payload: error });
       }
     }
   };

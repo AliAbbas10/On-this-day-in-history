@@ -249,6 +249,7 @@ button {
     min-height: 100vh;
     font-weight: bold;
     font-family: 'Trebuchet MS', sans-serif;
+    font-size: x-large;
 }
   
 .loading-spinner {
@@ -782,6 +783,7 @@ button {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.678), 0 1px 3px rgba(0, 0, 0, 0.08);
         position: relative;
         overflow-y: auto;
+        margin-right: 17px;
     
     }
     
@@ -818,7 +820,7 @@ button {
         justify-content: center; 
         transition: all 0.3s ease;
         font-family: 'Garamond', serif;
-        font-size: x-large;
+        font-size: large;
         border-radius: 15px;
         color: #969696;
         /* box-shadow: rgba(119, 119, 119, 0.25) 0px 10px 15px -12px inset, rgba(0, 0, 0, 0.3) 0px 9px 18px -18px inset; */
@@ -832,7 +834,7 @@ button {
     .tabs .tab-header > div.active{
         color: #000000;
         transition: all 0.3s ease;
-        font-size:40px;
+        font-size:25px;
         box-shadow: rgba(255, 255, 255, 0.527) 0px 5px 15px -12px inset, rgb(255, 255, 255) 0px 9px 18px -18px inset;
     }
     
@@ -879,6 +881,7 @@ button {
         margin-top: 5px;
         font-weight: bold;
         font-family: 'Trebuchet MS', sans-serif;
+        font-size: large;
     }
       
     .loading-spinner {

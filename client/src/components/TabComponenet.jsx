@@ -1,9 +1,9 @@
 import { useState, useContext, useEffect } from "react";
 import { HistoryContext } from '../Contexts/HistoryContext.jsx';
 
-const Tabs = ({ dateKey }) => {
+const Tabs = () => {
   const [activeTab, setActiveTab] = useState("Events");
-  const { data } = useContext(HistoryContext);
+  const { data, history } = useContext(HistoryContext);
 
   useEffect(() => {
     const storedTab = localStorage.getItem("activeTab");
@@ -20,11 +20,21 @@ const Tabs = ({ dateKey }) => {
     setActiveTab(tab);
   };
 
-  const renderItems = (title, summary) => (
-    <>
-      <p>{summary}</p>
-    </>
-  );
+  // const renderItems = (history) => {
+  //   return Object.values(history).map(date => (
+  //     <div key={date}>
+  //       <h1>{history[date].title}</h1>
+  //       <div>
+  //         {Object.values(history[date].summaries).map(summaryType => (
+  //           <div key={summaryType}>
+  //             <h2>{summaryType}</h2>
+  //             <p>{history[date].summaries[summaryType]}</p>
+  //           </div>
+  //         ))}
+  //       </div>
+  //     </div>
+  //   ));
+  // };
 
     return (
         <>
@@ -39,14 +49,18 @@ const Tabs = ({ dateKey }) => {
                     <div className={activeTab === 'Deaths' ? 'active' : ''} onClick={() => handleClick("Deaths")}>
                         <p>Deaths</p>
                     </div>
+                    {/* <div className={activeTab === 'Previous' ? 'active' : ''} onClick={() => handleClick("Previous")}>
+                        <p>Previous</p>
+                    </div> */}
                 </div>
                 <div className='tab-body'>
                     {/* {activeTab === 'Events' }
                     {activeTab === 'Births' }
                     {activeTab === 'Deaths' } */}
-                    {activeTab === 'Events' && renderItems("Events", data.summaries.events)}
-                    {activeTab === 'Births' && renderItems("Births", data.summaries.births)}
-                    {activeTab === 'Deaths' && renderItems("Deaths", data.summaries.deaths)}
+                    {activeTab === 'Events' && <p>{data.summaries.events}</p>}
+                    {activeTab === 'Births' && <p>{data.summaries.births}</p>}
+                    {activeTab === 'Deaths' && <p>{data.summaries.deaths}</p>}
+                    {/* {activeTab === 'Previous' && renderItems({history})} */}
                     
                 </div>
             </div>

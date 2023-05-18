@@ -33,7 +33,7 @@ const OtdPage = () => {
     }
 
     return () => {
-      controller.abort(); // Abort the fetch request when the component is unmounted
+      controller.abort(); 
     };
   }, [month, day, fetchData]);
 
@@ -50,14 +50,6 @@ const OtdPage = () => {
       <div className="tab-container">
         <h1 className='dateTitle'>{data.title}</h1> 
         <Tabs dateKey={dateKey} />
-        {/* <div>
-          <img src={`${process.env.PUBLIC_URL}/pillar.png`}
-            alt="Pillar-right"
-            className="right-pillar"/>
-          <img src={`${process.env.PUBLIC_URL}/pillar.png`}
-          alt="Pillar-left"
-          className="left-pillar"/>
-        </div> */}
       </div>
     </div>
   );
