@@ -3,8 +3,11 @@
 
 The website deploys a a frontend and backend design architecture:
 
-# Frontend
+## Frontend
 Otdih employs React, which makes the website interactive and easy to navigate, allowing users to input a specific date to delve into the historical events of that day.
 
-# Backend
+## Backend
 The backend, serving as the data retrieval and processing hub, communicates with the Wikipedia API to extract historical data based on the user's input. The data is then passed through the OpenAI API to generate a readable summary, offering an overview of the day's events.
+
+### Warning:
+The information provided by the website is generated ChatGPT and may be inaccurate or missing.
